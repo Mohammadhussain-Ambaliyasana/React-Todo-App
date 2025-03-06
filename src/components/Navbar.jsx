@@ -3,7 +3,7 @@ import React from 'react'
 const Navbar = () => {
   return (
     <nav className='navbar bg-blue-950 text-white h-12 flex justify-center items-center'>
-      <h1 className='font-bold text-2xl'>iTodo - Your Todo Manager</h1>
+      <h1 className='font-bold text-2xl'>iTodo - Your Todo App</h1>
     </nav>
   )
 }
