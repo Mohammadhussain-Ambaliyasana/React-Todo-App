@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import TodoBody from './components/TodoBody'
+import TodoBody1 from './components/TodoBody1'
 
 const App = () => {
 
@@ -9,6 +10,7 @@ const App = () => {
     <>
       <Navbar/>
       <TodoBody/>
+      {/* <TodoBody1/> */}
     </>
   )
 }

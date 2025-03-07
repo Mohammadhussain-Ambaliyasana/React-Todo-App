@@ -38,9 +38,15 @@ const TodoBody = () => {
     }
 
     const handelAdd = () => {
-        setTodos([...todos, {id: uuidv4(), todo, isCompleted:false}]);
+        // setTodos([...todos, {id: uuidv4(), todo, isCompleted:false}]);
+        // setTodo("");
+        // saveToLocalStorage();
+        const newTodo = {id: uuidv4(), todo, isCompleted:false}
         setTodo("");
-        saveToLocalStorage();
+        const oldTodo = todos
+        oldTodo.push(newTodo);
+        setTodos(oldTodo);
+        localStorage.setItem("todos", JSON.stringify(oldTodo));
     }
 
     const handelCheckBox = (e) => {
@@ -60,7 +66,8 @@ const TodoBody = () => {
             return item.id !== id;
         });
         setTodos(newTodos);
-        saveToLocalStorage();
+        // saveToLocalStorage();
+        localStorage.setItem("todos", JSON.stringify(newTodos));
     }
 
     const handelEdit = (e, id) => {
